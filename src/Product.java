@@ -25,10 +25,8 @@ public class Product {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        if (o instanceof Product product) {
-            return id == product.id && Objects.equals(category, product.category);
-        }
-        return false;
+        Product product = (Product) o;
+        return id == product.id && Objects.equals(category, product.category);
     }
 
     @Override
